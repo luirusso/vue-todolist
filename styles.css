@@ -5,3 +5,54 @@
     font-family: sans-serif;
 }
 
+.container {
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 0 20px;
+}
+
+header img {
+    max-width: 300px;
+}
+
+.app-header {
+    text-align: center;
+}
+
+.new-todo {
+    display: flex;
+}
+
+.new-todo input {
+    flex-grow: 1;
+    height: 40px;
+    border: 0;
+    border-radius: 30px;
+    border-bottom: 2px solid lightblue;
+    border-left: 2px solid lightblue;
+    outline: none;
+    transition: border .5s;
+    padding: 1rem;
+}
+
+.new-todo input:hover,
+.new-todo input:focus {
+    border-color: rgb(0, 110, 255);
+}
+
+.button {
+    padding: 0 25px;
+    background-color: rgb(0, 110, 255);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    transition: background .5s;
+    color: white;
+}
+
+.button:hover,
+.button:focus {
+    background-color: rgb(0, 54, 126);
+}
+
