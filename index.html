@@ -29,6 +29,8 @@
             <input 
             type="text" placeholder="Aggiungi nuovo todo"
             v-model.trim="newTodo"
+            @keyup.enter="addTodo"
+            ref="todoInput"
             >
 
             <button 
@@ -36,7 +38,7 @@
             @click="addTodo"
             >
                 AGGIUNGI
-             </button>
+            </button>
         </main>
 
         <section class="todos-section">
@@ -61,7 +63,9 @@
                     >
                         {{ todo.text }}
                     </span>
-                    <i class="fas fa-minus-circle"></i>
+                    <i class="fas fa-minus-circle"
+                    @click="removeTodo(index)"
+                    ></i>
                 </li>
             </ul>
         </section>

@@ -37,6 +37,9 @@ const app = new Vue({
         newTodo: '',
     },
     methods: {
+        /**
+         * Adding new todos to list
+         */
         addTodo() {
             if(this.newTodo !== '') {
                 console.log(this.newTodo);
@@ -46,8 +49,19 @@ const app = new Vue({
                     completed: false,
                 }
 
-                this.todos.push(newTodo);
+                this.todos.unshift(newTodo);
+
+                this.newTodo = '';
+
+                this.$refs.todoInput.focus();
             }
-        }
-    }
+        },
+
+        /**
+         * Removing todos from list
+         */
+        removeTodo(indexTodo) {
+            this.todos.splice(indexTodo, 1);
+        },
+    },
 });
