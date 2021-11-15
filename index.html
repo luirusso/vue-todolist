@@ -5,14 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Dos</title>
+    <!-- FONT AWESOME -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css' integrity='sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==' crossorigin='anonymous'/>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     
-    <header>
-        <div>
-            <img class="logo" src="https://www.boolean.careers/images/misc/logo.png" alt="">
-        </div>
-    </header>
+    <div id="app" class="container">
+        <header>
+            <div class="app-header">
+                <img src="https://www.boolean.careers/images/misc/logo.png" alt="Boolean Logo">
+            </div>
+        </header>
+
+        <main class="new-todo">
+            <input type="text" placeholder="Aggiungi nuovo todo">
+
+            <button class="button">
+                AGGIUNGI
+             </button>
+        </main>
+
+        <section class="todos-section">
+            <ul class="todos-list">
+                <li class="todo">
+                    <span class="text">
+                        Testo todo
+                    </span>
+                    <i class="fas fa-minus-circle"></i>
+                </li>
+                <li class="todo completed">
+                    <span class="text">
+                        Testo todo
+                    </span>
+                    <i class="fas fa-minus-circle"></i>
+                </li>
+            </ul>
+        </section>
+    </div>
 
     <script src="index.js"></script>
 </body>
