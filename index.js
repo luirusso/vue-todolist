@@ -63,5 +63,16 @@ const app = new Vue({
         removeTodo(indexTodo) {
             this.todos.splice(indexTodo, 1);
         },
+
+        /**
+         * Updatin completed todos
+         */
+        updateStatus(indexTodo) {
+            if(this.todos[indexTodo].completed) {
+                this.todos[indexTodo].completed = false;
+            } else {
+                this.todos[indexTodo].completed = true;
+            }
+        }
     },
 });

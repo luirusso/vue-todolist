@@ -58,6 +58,11 @@ header img {
     background-color: rgb(0,21,51);
 }
 
+.notodos-text {
+    color: rgb(0, 225, 101);
+    text-align: center;
+}
+
 .todos-section {
     margin: 45px;
     color: white;

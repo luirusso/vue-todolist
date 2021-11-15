@@ -42,7 +42,9 @@
         </main>
 
         <section class="todos-section">
-            <ul class="todos-list">
+            <ul class="todos-list"
+            v-if="todos.length > 0"
+            >
                 <!-- <li class="todo">
                     <span class="text">
                         Testo todo
@@ -56,10 +58,11 @@
                     <i class="fas fa-minus-circle"></i>
                 </li> -->
 
-                <li class="todo" v-for="todo in todos">
+                <li class="todo" v-for="(todo, index) in todos">
                     <span 
                     class="text"
                     :class="{completed: todo.completed}"
+                    @click="updateStatus(index)"
                     >
                         {{ todo.text }}
                     </span>
@@ -68,6 +71,9 @@
                     ></i>
                 </li>
             </ul>
+            <h2 class="notodos-text" v-else>
+                Non hai todos al momento...
+            </h2>
         </section>
     </div>
 
