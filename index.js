@@ -17,3 +17,22 @@ Bonus:
 2. Cliccando sul testo del todo, invertire il valore della proprietà completed del todo corrispondente (se completed era uguale a false, impostare true e viceversa).
  */
 
+const app = new Vue({
+    el: '#app',
+    data: {
+        todos: [
+            {
+                text: 'TODO DI ESEMPIO',
+                completed: false,
+            },
+            {
+                text: 'TODO DI ESEMPIO',
+                completed: true,
+            },
+            {
+                text: 'TODO DI ESEMPIO',
+                completed: false,
+            },
+        ],
+    }
+});

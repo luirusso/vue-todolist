@@ -35,7 +35,7 @@
 
         <section class="todos-section">
             <ul class="todos-list">
-                <li class="todo">
+                <!-- <li class="todo">
                     <span class="text">
                         Testo todo
                     </span>
@@ -44,6 +44,13 @@
                 <li class="todo completed">
                     <span class="text completed">
                         Testo todo
+                    </span>
+                    <i class="fas fa-minus-circle"></i>
+                </li> -->
+
+                <li class="todo" v-for="todo in todos">
+                    <span class="text">
+                        {{ todo.text }}
                     </span>
                     <i class="fas fa-minus-circle"></i>
                 </li>
