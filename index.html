@@ -66,13 +66,13 @@
                     >
                         {{ todo.text }}
                     </span>
-                    <i class="fas fa-minus-circle"
+                    <i class="delete-icon fas fa-minus-circle"
                     @click="removeTodo(index)"
                     ></i>
                 </li>
             </ul>
             <h2 class="notodos-text" v-else>
-                Non hai todos al momento...
+                Non hai todos al momento.
             </h2>
         </section>
     </div>
