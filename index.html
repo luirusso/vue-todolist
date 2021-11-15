@@ -26,9 +26,15 @@
         </header>
 
         <main class="new-todo">
-            <input type="text" placeholder="Aggiungi nuovo todo">
+            <input 
+            type="text" placeholder="Aggiungi nuovo todo"
+            v-model.trim="newTodo"
+            >
 
-            <button class="button">
+            <button 
+            class="button"
+            @click="addTodo"
+            >
                 AGGIUNGI
              </button>
         </main>
@@ -49,7 +55,10 @@
                 </li> -->
 
                 <li class="todo" v-for="todo in todos">
-                    <span class="text">
+                    <span 
+                    class="text"
+                    :class="{completed: todo.completed}"
+                    >
                         {{ todo.text }}
                     </span>
                     <i class="fas fa-minus-circle"></i>
